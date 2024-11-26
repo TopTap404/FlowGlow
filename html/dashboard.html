@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <!-- เชื่อม CSS -->
+  <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Dashboard</h1>
+    </div>
+    <div class="content">
+      <div class="card">
+        <h2>Temperature</h2>
+        <div class="value" id="temperature">--°C</div>
+      </div>
+      <div class="card">
+        <h2>Humidity</h2>
+        <div class="value" id="humidity">--%</div>
+      </div>
+      <div class="card clock-card">
+        <div class="clock" id="clock">--:--</div>
+        <div class="date" id="date">--/--/----</div>
+      </div>
+    </div>
+    <button id="logout-btn" onclick="logout()">Logout</button>
+  </div>
+  <!-- เชื่อม JavaScript -->
+  <script src="scripts/dashboard.js"></script>
+</body>
+</html>

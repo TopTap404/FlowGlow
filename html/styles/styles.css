@@ -1,0 +1,102 @@
+/* === Reset CSS === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Body Styling === */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Auth Container === */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.auth-card {
+  background: #1e1e2f;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 80px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 350px;
+}
+
+.app-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #00bcd4;
+}
+
+/* === Input Group === */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #bdbdbd;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #2a2a40;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-group input::placeholder {
+  color: #888;
+}
+
+/* === Button Styling === */
+.btn-auth {
+  width: 100%;
+  padding: 10px;
+  background: #00bcd4;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-auth:hover {
+  background: #0097a7;
+}
+
+/* === Switch Auth Text === */
+.switch-auth {
+  margin-top: 10px;
+}
+
+.switch-auth a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.switch-auth a:hover {
+  text-decoration: underline;
+}
