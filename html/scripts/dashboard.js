@@ -26,7 +26,7 @@ function logout() {
   async function fetchTemperature() {
     const displayElement = document.getElementById('temperature');
     try {
-      const response = await fetch('http://104.214.176.253:3001/getTemperature');
+      const response = await fetch('https://flowglow.eastasia.cloudapp.azure.com:3001/getTemp');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -46,7 +46,7 @@ function logout() {
   async function fetchHumidity() {
     const displayElement = document.getElementById('humidity');
     try {
-      const response = await fetch('http://104.214.176.253:3001/getHumidity');
+      const response = await fetch('https://flowglow.eastasia.cloudapp.azure.com:3001/getHum');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -55,7 +55,7 @@ function logout() {
       const humidity = data.humidity;
   
       displayElement.textContent = humidity !== null
-        ? `Current Temperature: ${humidity}°C`
+        ? `Current Humidity: ${humidity}%`
         : "No humidity data available.";
     } catch (error) {
       console.error('Error fetching humidity:', error);
@@ -64,7 +64,6 @@ function logout() {
   }
   // เรียกใช้ updateClock ทุก 1 วินาที
   setInterval(fetchTemperature, 1000);
+  setInterval(fetchHumidity, 1000);
   setInterval(updateClock, 1000);
-  updateClock();
-  window.onload = fetchTemperature();
   

@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
   
-    const apiUrl = 'http://localhost:3001/login';
+    const apiUrl = 'https://flowglow.eastasia.cloudapp.azure.com:3001/login';
     fetch(apiUrl, {
       method: 'POST',
       headers: {

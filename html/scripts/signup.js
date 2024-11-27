@@ -6,7 +6,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     const password = document.getElementById('newPassword').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
 
-    const apiUrl = 'http://localhost:3001/register';
+    const apiUrl = 'https://flowglow.eastasia.cloudapp.azure.com:3001/register';
   
     // ตรวจสอบว่ารหัสผ่านตรงกัน
     if (password !== confirmPassword) {
