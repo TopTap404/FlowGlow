@@ -27,8 +27,8 @@ const sslkey = {
   ca: fs.readFileSync('/home/paramet/key/chain.pem')
 }
 
-let Datatemp = null;
-let Datahum = null;
+let temperature = null;
+let humidity = null;
 
 async function connectDB() {
   try {
@@ -52,7 +52,6 @@ app.post("/upTemp", (req, res) => {
   const temp = req.body.temperature;
   if (temp !== undefined) { // ตรวจสอบว่าค่า temp มีค่าจริงหรือไม่
     temperature = temp;
-    Datatemp = temp;
     console.log(`Received temperature: ${temperature}`);
     res.status(200).send("Data received");
   } else {
@@ -65,7 +64,6 @@ app.post("/upHum", (req, res) => {
   const hum = req.body.humidity;
   if (hum !== undefined) { // ตรวจสอบว่าค่า hum มีค่าจริงหรือไม่
     humidity = hum;
-    Datahum = temp;
     console.log(`Received humidity: ${humidity}`);
     res.status(200).send("Data received");
   } else {
